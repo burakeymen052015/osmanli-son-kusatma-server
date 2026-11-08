@@ -1,0 +1,11 @@
+{
+  "name": "osmanli-coop-server",
+  "version": "1.0.0",
+  "main": "osmanli-coop-server.js",
+  "scripts": {
+    "start": "node osmanli-coop-server.js"
+  },
+  "dependencies": {
+    "ws": "^8.18.0"
+  }
+}
