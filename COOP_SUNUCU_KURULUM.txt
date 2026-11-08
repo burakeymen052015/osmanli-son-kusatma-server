@@ -1,0 +1,42 @@
+OSMANLI: SON KUSATMA — 4 OYUNCULU CO-OP SUNUCUSU
+
+BU PAKET NE SAGLAR?
+- Ayni odada en fazla 4 oyuncu.
+- Oda kurma ve 6 karakterli oda koduyla katilma.
+- Oyuncu isimleri ve konum/yön bilgisinin paylasilmasi.
+- /health saglik kontrolu.
+- Baglanti kopmalarini temizlemek icin WebSocket ping/pong.
+- Render icin hazir render.yaml dosyasi.
+
+ONEMLI SINIRLAR
+Bu hala ilk co-op altyapisidir. Dusman cani, dusman saldirilari, gorev hedefleri,
+ganimet, oyuncu hasari ve bolum ilerlemesi ortak sunucuda yonetilmiyor. Bu nedenle
+bitmis, herkese acik bir multiplayer oyun olarak duyurulmamalidir. Oda sunucusu
+konumlari paylasir; tum oyun kurallarini henuz esitlemez.
+
+YAYINA ALMA (YETISKIN YARDIMIYLA)
+1. Bu klasordeki dosyalari bir Git deposuna yukleyin.
+2. Render kontrol panelinde New > Web Service secin ve depoyu baglayin.
+3. render.yaml dosyasindaki ayarlar kullanilabilir. Servis adi uygun degilse degistirin.
+4. Deploy tamamlaninca servisin adresi https://SERVIS-ADI.onrender.com seklinde olur.
+5. Oyundaki Cok Oyunculu ekranina WebSocket adresini girin:
+   wss://SERVIS-ADI.onrender.com
+6. Bir oyuncu ODA KUR der; digeri ayni adres ve oda koduyla ODAYA KATIL der.
+
+YEREL DENEME
+1. Node.js 20 veya ustunu kurun.
+2. Bu klasorde terminal acin.
+3. npm install
+4. npm start
+5. Oyundaki sunucu adresine ws://localhost:8080 yazin.
+
+HOSTING NOTLARI
+Render'in ucretsiz web servisleri 15 dakika hic trafik almazsa uykuya gecer ve
+sonraki baglantida yeniden baslamasi yaklasik bir dakika surebilir. Ucretsiz
+servisler test/hobi kullanimi icindir; yeniden baslatilabilir ve kalici diskleri
+yoktur. Bu nedenle oda bilgileri sunucu yeniden basladiginda kaybolabilir.
+Herkese acik ve surekli bir oyun icin daha sonra kalici depolama, hesap/oturum,
+kotuye kullanim korumasi, sunucu tarafli oyun dogrulamasi ve izleme eklenmelidir.
+
+Hesap acma, Git deposu ve yayina alma adimlarini guvendigin bir yetiskinle yap.
+Sifre, e-posta dogrulama kodu veya diger gizli bilgileri buraya gonderme.
